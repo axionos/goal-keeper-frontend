@@ -7,15 +7,21 @@ class Navbar extends React.Component {
 
   }
 
+  signOut = () => {
+    localStorage.clear()
+    window.location.replace('http://localhost:3001/')
+  }
 
 
   render(){
 
     return (
       <div className="navbar">
-        <NavLink to='/goal' exact> My Goal </NavLink>
+        <NavLink to='/' exact> My Goal </NavLink>
         <NavLink to='/todo' exact> To-Do </NavLink>
         <NavLink to='/profile' exact> Profile </NavLink>
+        <NavLink to='/login' exact> LogIn </NavLink>
+        <button onClick={this.signOut}> SignOut </button>
       </div>
     );
   }
