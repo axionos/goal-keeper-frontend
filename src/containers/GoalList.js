@@ -10,6 +10,8 @@ class GoalList extends React.Component {
         'Authorization': localStorage.getItem('token')
       }
     })
+    .then(res => res.json())
+    .then(console.log)
   }
 
   render(){
