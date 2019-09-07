@@ -44,11 +44,14 @@ class LogIn extends React.Component {
     console.log('login props', this.props);
 
     return(
+      <div>
+      <h1>Log In</h1>
       <form onSubmit={this.handleLogin}>
         <input type='text' name='username' onChange={this.handleChange}/>
         <input type='password' name='password' onChange={this.handleChange}/>
         <input type='submit' value='LogIn' />
       </form>
+      </div>
     )
   }
 }

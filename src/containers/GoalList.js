@@ -1,6 +1,10 @@
 import React from 'react';
 
 class GoalList extends React.Component {
+  state = {
+    user: ''
+  }
+
   componentDidMount(){
     if (!localStorage.getItem('token')){
       this.props.router.history.push('/login')
@@ -11,13 +15,19 @@ class GoalList extends React.Component {
       }
     })
     .then(res => res.json())
-    .then(console.log)
+    .then(data => {
+      console.log(data)
+      this.setState({
+        user: data
+      })
+    })
   }
 
   render(){
-    console.log('goal list props', this.props);
+    console.log('goal list state', this.state);
     return (
       <div className="goal-list">
+        <h1>Hello, {this.state.user.username.toUpperCase()}</h1>
         GoalList
       </div>
     );
