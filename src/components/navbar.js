@@ -6,8 +6,10 @@ class Navbar extends React.Component {
 
 
   signOut = () => {
-    localStorage.clear()
-    window.location.replace('http://localhost:3001/')
+    if (localStorage.length > 0) {
+      localStorage.clear()
+      window.location.replace('http://localhost:3001/')
+    }
   }
 
 
