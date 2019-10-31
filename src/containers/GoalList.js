@@ -42,6 +42,7 @@ class GoalList extends React.Component {
   render(){
     console.log('goal list props', this.props);
     console.log('goal list state', this.state);
+
     return (
       <div className="goal-list">
         <h1>Hello, {this.props.user.username}</h1>
@@ -56,7 +57,6 @@ class GoalList extends React.Component {
             <DatePicker
               selected={this.state.endDate}
               onChange={this.handleChangeEndDate} />
-            <br />
             <input type="submit" value="Submit"/>
           </form>
         </div>
