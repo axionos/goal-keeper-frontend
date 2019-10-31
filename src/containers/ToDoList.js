@@ -11,7 +11,11 @@ class ToDoList extends React.Component {
 
     return (
       <div className="todo-list">
-        ToDoList
+        <h1>TO DO LIST</h1>
+        <form method="post">
+          <input type="text" placeholder="New Task" name="task" />
+          <button type="submit">Add</button>
+        </form>
       </div>
     );
   }
